@@ -1,0 +1,19 @@
+{
+  "main": [
+    {
+      "name": "facebook",
+      "icon": "fab fa-facebook",
+      "link": "https://www.facebook.com/wildnestvillaunawatuna"
+    },
+    {
+      "name": "instagram",
+      "icon": "fab fa-instagram",
+      "link": "https://www.instagram.com/wildnestvilla"
+    },
+    {
+      "name": "Whatsapp",
+      "icon": "fab fa-whatsapp",
+      "link": "https://wa.me/message/54MTK46EN7RTL1"
+    }
+  ]
+}
