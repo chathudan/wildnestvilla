@@ -3,8 +3,13 @@ stages:
 
 variables:
   HUGO_ENV: production
+<<<<<<< HEAD
   HUGO_VERSION: "0.118.2"
   GO_VERSION: "1.20.5"
+=======
+  HUGO_VERSION: "0.139.2"
+  GO_VERSION: "1.23.3"
+>>>>>>> upstream/main
   NODE_VERSION: "18.16.1"
 
 cache:

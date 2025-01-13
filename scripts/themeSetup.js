@@ -5,12 +5,27 @@ const toggleComment = ({ filepath, regex }) => {
   let updatedContent = fs.readFileSync(filepath, "utf8");
   const match = updatedContent.match(regex);
 
+<<<<<<< HEAD
+=======
+  if (filepath.endsWith("hugo.toml")) {
+    updatedContent = updatedContent.replace(
+      'baseURL = "/"',
+      'baseURL = "https://example.org"',
+    );
+  }
+
+>>>>>>> upstream/main
   if (match) {
     const matchedContent = match[0];
     const hasComment = matchedContent.startsWith("# ");
     if (hasComment) {
+<<<<<<< HEAD
       const hasBreakline = matchedContent.includes("\n");
       if (hasBreakline) {
+=======
+      const hasLineBreak = matchedContent.includes("\n");
+      if (hasLineBreak) {
+>>>>>>> upstream/main
         updatedContent = updatedContent.replace(
           regex,
           matchedContent.replace(/# /gm, ""),
@@ -24,8 +39,13 @@ const toggleComment = ({ filepath, regex }) => {
   }
 };
 
+<<<<<<< HEAD
 const createNewfolder = (rootfolder, folderName) => {
   const newFolder = path.join(rootfolder, folderName);
+=======
+const createNewFolder = (rootFolder, folderName) => {
+  const newFolder = path.join(rootFolder, folderName);
+>>>>>>> upstream/main
   fs.mkdirSync(newFolder, { recursive: true });
   return newFolder;
 };
@@ -36,8 +56,13 @@ const deleteFolder = (folderPath) => {
   }
 };
 
+<<<<<<< HEAD
 const getFolderName = (rootfolder) => {
   const configPath = path.join(rootfolder, "exampleSite/hugo.toml");
+=======
+const getFolderName = (rootFolder) => {
+  const configPath = path.join(rootFolder, "exampleSite/hugo.toml");
+>>>>>>> upstream/main
   const getConfig = fs.readFileSync(configPath, "utf8");
   const match = getConfig.match(/theme\s*=\s*\[?"([^"\]]+)"\]?/);
   let selectedTheme = null;
@@ -52,7 +77,11 @@ const iterateFilesAndFolders = (rootFolder, { destinationRoot }) => {
   const items = fs.readdirSync(directory, { withFileTypes: true });
   items.forEach((item) => {
     if (item.isDirectory()) {
+<<<<<<< HEAD
       createNewfolder(destinationRoot, item.name);
+=======
+      createNewFolder(destinationRoot, item.name);
+>>>>>>> upstream/main
       iterateFilesAndFolders(path.join(directory, item.name), {
         currentFolder: item.name,
         destinationRoot: path.join(destinationRoot, item.name),
@@ -94,7 +123,11 @@ const setupTheme = () => {
       "static",
     ];
 
+<<<<<<< HEAD
     const folder = createNewfolder(rootFolder, "exampleSite");
+=======
+    const folder = createNewFolder(rootFolder, "exampleSite");
+>>>>>>> upstream/main
 
     fs.readdirSync(rootFolder, { withFileTypes: true }).forEach((file) => {
       if (includesFiles.includes(file.name)) {

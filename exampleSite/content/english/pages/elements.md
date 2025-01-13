@@ -121,9 +121,15 @@ This is a simple warning.
 {{< tabs >}}
 {{< tab "Tab 1" >}}
 
+<<<<<<< HEAD
 #### Did you come here for something in particular?
 
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.
+=======
+#### Hey There, I am a tab
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+>>>>>>> upstream/main
 
 {{< /tab >}}
 
@@ -192,6 +198,18 @@ s = "Python syntax highlighting"
 print s
 ```
 
+<<<<<<< HEAD
+=======
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -- Yes --> C[OK]
+    C --> D[Rethink]
+    D --> B
+    B -- No ----> E[End]
+```
+
+>>>>>>> upstream/main
 <hr>
 
 ### Blockquote

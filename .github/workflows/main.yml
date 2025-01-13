@@ -15,9 +15,15 @@ permissions:
 # Environment variables available to all jobs and steps in this workflow
 env:
   HUGO_ENV: production
+<<<<<<< HEAD
   HUGO_VERSION: "0.118.2"
   GO_VERSION: "1.20.5"
   NODE_VERSION: "18.15.0"
+=======
+  HUGO_VERSION: "0.139.2"
+  GO_VERSION: "1.23.3"
+  NODE_VERSION: "20.0.0"
+>>>>>>> upstream/main
   TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
   TINA_TOKEN: ${{ vars.TINA_TOKEN }}
 
@@ -26,9 +32,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
+=======
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+>>>>>>> upstream/main
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -58,7 +70,11 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
+<<<<<<< HEAD
         uses: actions/upload-pages-artifact@v1
+=======
+        uses: actions/upload-pages-artifact@v3
+>>>>>>> upstream/main
         with:
           path: ./public
 
@@ -72,4 +88,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+<<<<<<< HEAD
         uses: actions/deploy-pages@v2
+=======
+        uses: actions/deploy-pages@v4
+>>>>>>> upstream/main

@@ -4,7 +4,11 @@
     <!-- logo -->
     <div class="order-0">
       <!-- navbar brand/logo -->
+<<<<<<< HEAD
       <a class="navbar-brand block" href="{{ site.BaseURL | relLangURL }}">
+=======
+      <a class="navbar-brand block" href="{{ site.Home.RelPermalink }}">
+>>>>>>> upstream/main
         {{ partial "logo" }}
       </a>
     </div>
@@ -64,7 +68,11 @@
                     {{ end }}
                     href="{{- if findRE `^#` .URL -}}
                       {{- if not $.IsHome -}}
+<<<<<<< HEAD
                         {{- site.BaseURL | relLangURL -}}
+=======
+                        {{- site.Home.RelPermalink -}}
+>>>>>>> upstream/main
                       {{- end }}
                       {{- .URL -}}
                     {{- else -}}
@@ -85,7 +93,11 @@
               {{ end }}
               href="{{- if findRE `^#` .URL -}}
                 {{- if not $.IsHome -}}
+<<<<<<< HEAD
                   {{- site.BaseURL | relLangURL -}}
+=======
+                  {{- site.Home.RelPermalink -}}
+>>>>>>> upstream/main
                 {{- end }}{{- .URL -}}
               {{- else -}}
                 {{- .URL | relLangURL -}}
@@ -111,7 +123,15 @@
         {{ if .enable }}
           <button
             aria-label="search"
+<<<<<<< HEAD
             class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white"
+=======
+            {{ if and (not site.Params.navigation_button.enable) (not site.Params.theme_switcher)}}
+            class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r lg:border-r-0 pr-5 lg:pr-0 text-xl dark:text-white dark:hover:text-darkmode-primary"
+            {{ else }}
+            class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white dark:hover:text-darkmode-primary"
+            {{ end }}
+>>>>>>> upstream/main
             data-target="search-modal">
             <i class="fa-solid fa-search"></i>
           </button>

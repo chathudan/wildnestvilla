@@ -7,5 +7,18 @@
         "distDir": "public"
       }
     }
+<<<<<<< HEAD
+=======
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
+>>>>>>> upstream/main
   ]
 }

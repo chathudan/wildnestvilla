@@ -1,9 +1,17 @@
 html {
+<<<<<<< HEAD
   @apply text-base;
 }
 
 body {
   @apply bg-body font-primary text-text dark:bg-darkmode-body dark:text-darkmode-text font-normal leading-relaxed;
+=======
+  @apply text-base-sm md:text-base;
+}
+
+body {
+  @apply bg-body text-base dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text dark:text-darkmode-text;
+>>>>>>> upstream/main
 }
 
 h1,
@@ -12,7 +20,11 @@ h3,
 h4,
 h5,
 h6 {
+<<<<<<< HEAD
   @apply font-secondary text-dark dark:text-darkmode-dark font-bold leading-tight;
+=======
+  @apply font-secondary font-bold leading-tight text-dark dark:text-darkmode-dark;
+>>>>>>> upstream/main
 }
 
 h1,
@@ -32,17 +44,29 @@ h3,
 
 h4,
 .h4 {
+<<<<<<< HEAD
   @apply text-h4 font-medium;
+=======
+  @apply text-h4;
+>>>>>>> upstream/main
 }
 
 h5,
 .h5 {
+<<<<<<< HEAD
   @apply text-h5 font-medium;
+=======
+  @apply text-h5;
+>>>>>>> upstream/main
 }
 
 h6,
 .h6 {
+<<<<<<< HEAD
   @apply text-h6 font-medium;
+=======
+  @apply text-h6;
+>>>>>>> upstream/main
 }
 
 b,

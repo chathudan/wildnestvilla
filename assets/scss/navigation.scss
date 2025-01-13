@@ -36,7 +36,11 @@ input#nav-toggle:checked ~ #nav-menu {
 // }
 
 .nav-link {
+<<<<<<< HEAD
   @apply text-dark hover:text-primary dark:text-darkmode-dark block p-3 font-semibold transition lg:px-2 lg:py-3;
+=======
+  @apply text-dark hover:text-primary dark:text-darkmode-dark dark:hover:text-darkmode-primary block p-3 cursor-pointer font-semibold transition lg:px-2 lg:py-3;
+>>>>>>> upstream/main
 }
 
 .nav-dropdown {

@@ -2,8 +2,13 @@
 
 # default versions
 NODE_VERSION='18.16.1';
+<<<<<<< HEAD
 GO_VERSION='1.20.5';
 HUGO_VERSION='0.118.2';
+=======
+GO_VERSION='1.23.3';
+HUGO_VERSION='0.139.2';
+>>>>>>> upstream/main
 
 # install Node.js
 # echo "Installing Node.js $NODE_VERSION..."

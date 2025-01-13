@@ -10,7 +10,11 @@
 
   dropdownMenuToggler.forEach((toggler) => {
     toggler?.addEventListener("click", (e) => {
+<<<<<<< HEAD
       e.target.parentElement.classList.toggle("active");
+=======
+      e.target.closest('.nav-item').classList.toggle("active");
+>>>>>>> upstream/main
     });
   });
 

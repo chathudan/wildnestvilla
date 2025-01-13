@@ -1,12 +1,17 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
+<<<<<<< HEAD
 baseURL = "/"
+=======
+baseURL = "https://example.org"
+>>>>>>> upstream/main
 # Title of your website (required).
 title = "Hugoplate"
 # Your theme name
 # theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
+<<<<<<< HEAD
 # post pagination
 paginate = 2 # see https://gohugo.io/extras/pagination/
 # post excerpt
@@ -15,17 +20,46 @@ summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
 googleAnalytics = "G-MEASUREMENT_ID" # see https://gohugo.io/templates/internal/#configure-google-analytics
 # disqus short name
 disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+=======
+# post excerpt
+summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+>>>>>>> upstream/main
 # disable language
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
+<<<<<<< HEAD
 
+=======
+# default language
+defaultContentLanguage = 'en'
+# defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
+defaultContentLanguageInSubdir = false
+
+########################### Services #############################
+[services]
+[services.googleAnalytics]
+ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
+
+[services.disqus]
+shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+>>>>>>> upstream/main
 
 ########################## Permalinks ############################
 [permalinks.page]
 "pages" = "/:slugorfilename/"
 
 
+<<<<<<< HEAD
+=======
+########################## Pagination ############################
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = 'page'
+
+
+>>>>>>> upstream/main
 ############################# Modules ############################
 [module]
 [[module.mounts]]
@@ -70,7 +104,11 @@ home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
 [imaging]
 # See https://github.com/disintegration/imaging
 # Default JPEG or WebP quality setting. Default is 75.
+<<<<<<< HEAD
 quality = 90
+=======
+quality = 80
+>>>>>>> upstream/main
 resampleFilter = "Lanczos"
 
 ############################ Caches ##############################
@@ -122,6 +160,7 @@ notAlternative = true
 # CSS Plugins
 [[params.plugins.css]]
 link = "plugins/swiper/swiper-bundle.css"
+<<<<<<< HEAD
 [[params.plugins.css]]
 link = "plugins/glightbox/glightbox.css"
 [[params.plugins.css]]
@@ -130,10 +169,26 @@ link = "plugins/font-awesome/v6/brands.css"
 link = "plugins/font-awesome/v6/solid.css"
 [[params.plugins.css]]
 link = "plugins/font-awesome/v6/icons.css"
+=======
+lazy = true
+[[params.plugins.css]]
+link = "plugins/glightbox/glightbox.css"
+lazy = true
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/brands.css"
+lazy = true
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/solid.css"
+lazy = true
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/icons.css"
+lazy = true
+>>>>>>> upstream/main
 
 # JS Plugins
 [[params.plugins.js]]
 link = "js/search.js"
+<<<<<<< HEAD
 [[params.plugins.js]]
 link = "plugins/swiper/swiper-bundle.js"
 [[params.plugins.js]]
@@ -150,3 +205,30 @@ link = "js/modal.js"
 link = "plugins/cookie.js"
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
+=======
+lazy = false
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.js"
+lazy = false
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+lazy = false
+[[params.plugins.js]]
+link = "plugins/glightbox/glightbox.js"
+lazy = true
+[[params.plugins.js]]
+link = "js/gallery-slider.js"
+lazy = true
+[[params.plugins.js]]
+link = "js/accordion.js"
+lazy = true
+[[params.plugins.js]]
+link = "js/tab.js"
+lazy = true
+[[params.plugins.js]]
+link = "js/modal.js"
+lazy = true
+[[params.plugins.js]]
+link = "plugins/youtube-lite.js"
+lazy = true
+>>>>>>> upstream/main

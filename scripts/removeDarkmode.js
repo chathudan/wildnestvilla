@@ -13,6 +13,37 @@ const configFiles = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+// asset paths
+const deleteAssetList = [
+  "exampleSite/assets/images/logo-darkmode.png",
+  "layouts/partials/components/theme-switcher.html",
+];
+
+const filePaths = [
+  {
+    filePath: "layouts/partials/essentials/header.html",
+    patterns: [
+      '{{\\s*partial\\s*"components\\/theme-switcher"\\s*\\([^)]*\\)\\s*}}',
+    ],
+  },
+];
+
+filePaths.forEach(({ filePath, patterns }) =>
+  removeDarkModeFromFiles(filePath, patterns),
+);
+
+deleteAssetList.forEach((asset) => {
+  try {
+    fs.unlinkSync(asset);
+    console.log(`${path.basename(asset)} deleted successfully!`);
+  } catch (error) {
+    console.error(`${asset} not found`);
+  }
+});
+
+>>>>>>> upstream/main
 rootDirs.forEach(removeDarkModeFromPages);
 configFiles.forEach(removeDarkMode);
 
@@ -23,9 +54,17 @@ function removeDarkModeFromFiles(filePath, regexPatterns) {
     const regex = new RegExp(pattern, "g");
     updatedContent = updatedContent.replace(regex, "");
   });
+<<<<<<< HEAD
   fs.writeFileSync(filePath, updatedContent, "utf8");
 }
 
+=======
+
+  fs.writeFileSync(filePath, updatedContent, "utf8");
+}
+
+// like html file
+>>>>>>> upstream/main
 function removeDarkModeFromPages(directoryPath) {
   const files = fs.readdirSync(directoryPath);
 

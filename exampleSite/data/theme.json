@@ -38,7 +38,11 @@
     },
     "font_size": {
       "base": "16",
+<<<<<<< HEAD
       "scale": "1.250"
+=======
+      "scale": "1.2"
+>>>>>>> upstream/main
     }
   }
 }

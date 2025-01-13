@@ -6,7 +6,11 @@ const theme = JSON.parse(themeRead);
 
 let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
 let font_scale = Number(theme.fonts.font_size.scale);
+<<<<<<< HEAD
 let h6 = font_base / font_base;
+=======
+let h6 = font_scale;
+>>>>>>> upstream/main
 let h5 = h6 * font_scale;
 let h4 = h5 * font_scale;
 let h3 = h4 * font_scale;
@@ -16,13 +20,21 @@ let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
 if (theme.fonts.font_family.primary) {
   fontPrimary = theme.fonts.font_family.primary
     .replace(/\+/g, " ")
+<<<<<<< HEAD
     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+=======
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
+>>>>>>> upstream/main
   fontPrimaryType = theme.fonts.font_family.primary_type;
 }
 if (theme.fonts.font_family.secondary) {
   fontSecondary = theme.fonts.font_family.secondary
     .replace(/\+/g, " ")
+<<<<<<< HEAD
     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+=======
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
+>>>>>>> upstream/main
   fontSecondaryType = theme.fonts.font_family.secondary_type;
 }
 
@@ -68,12 +80,22 @@ module.exports = {
       },
       fontSize: {
         base: font_base + "px",
+<<<<<<< HEAD
         h1: h1 + "rem",
         "h1-sm": h1 * 0.8 + "rem",
         h2: h2 + "rem",
         "h2-sm": h2 * 0.8 + "rem",
         h3: h3 + "rem",
         "h3-sm": h3 * 0.8 + "rem",
+=======
+        "base-sm": font_base * 0.8 + "px",
+        h1: h1 + "rem",
+        "h1-sm": h1 * 0.9 + "rem",
+        h2: h2 + "rem",
+        "h2-sm": h2 * 0.9 + "rem",
+        h3: h3 + "rem",
+        "h3-sm": h3 * 0.9 + "rem",
+>>>>>>> upstream/main
         h4: h4 + "rem",
         h5: h5 + "rem",
         h6: h6 + "rem",

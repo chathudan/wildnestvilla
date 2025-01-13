@@ -1,6 +1,12 @@
 <!doctype html>
 <html
   itemscope
+<<<<<<< HEAD
+=======
+  class="{{- if not site.Params.theme_switcher -}}
+    {{- site.Params.theme_default -}}
+  {{- end -}}"
+>>>>>>> upstream/main
   lang="{{ site.LanguageCode | default `en-US` }}"
   itemtype="http://schema.org/WebPage">
   <head>
@@ -10,6 +16,10 @@
 
     <!-- style (always cache it) -->
     {{ partialCached "essentials/style.html" . }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
   </head>
 
   <body>
@@ -26,6 +36,13 @@
     {{ end }}
 
 
+<<<<<<< HEAD
+=======
+    <!-- announcement -->
+    {{ partialCached "announcement.html" . }}
+
+
+>>>>>>> upstream/main
     <!-- header (don't cache it) -->
     {{ partial "essentials/header.html" . }}
     {{ partial "search-modal.html" (dict "Context" . ) }}
@@ -35,6 +52,7 @@
       {{ block "main" . }}{{ end }}
     </main>
 
+<<<<<<< HEAD
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "essentials/footer.html" . }}
@@ -43,5 +61,13 @@
       {{ partial "essentials/footer.html" . }}
       {{ partial "essentials/script.html" . }}
     {{ end }}
+=======
+    <!-- footer -->
+    {{ partial "essentials/footer.html" . }}
+
+
+    <!-- script (always cache it) -->
+    {{ partialCached "essentials/script.html" . }}
+>>>>>>> upstream/main
   </body>
 </html>

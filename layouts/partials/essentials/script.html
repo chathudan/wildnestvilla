@@ -1,5 +1,9 @@
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
+<<<<<<< HEAD
+=======
+{{ $scriptsLazy := slice }}
+>>>>>>> upstream/main
 {{ range site.Params.plugins.js }}
   {{ if findRE "^http" .link }}
     <script
@@ -7,7 +11,15 @@
       type="application/javascript"
       {{ .attributes | safeHTMLAttr }}></script>
   {{ else }}
+<<<<<<< HEAD
     {{ $scripts = $scripts | append (resources.Get .link) }}
+=======
+    {{ if not .lazy }}
+      {{ $scripts = $scripts | append (resources.Get .link) }}
+    {{ else }}
+      {{ $scriptsLazy = $scriptsLazy | append (resources.Get .link) }}
+    {{ end }}
+>>>>>>> upstream/main
   {{ end }}
 {{ end }}
 
@@ -15,16 +27,39 @@
 <!-- main script -->
 {{ $scripts = $scripts | append (resources.Get "js/main.js") }}
 {{ $scripts = $scripts | resources.Concat "js/script.js" }}
+<<<<<<< HEAD
 {{ if hugo.IsProduction }}
   {{ $scripts = $scripts | minify | fingerprint }}
 {{ end }}
 
 
+=======
+
+{{ $scriptsLazy = $scriptsLazy | resources.Concat "js/script-lazy.js" }}
+
+{{ if hugo.IsProduction }}
+  {{ $scripts = $scripts | minify | fingerprint }}
+  {{ $scriptsLazy = $scriptsLazy | minify | fingerprint }}
+{{ end }}
+
+{{/* scripts */}}
+>>>>>>> upstream/main
 <script
   crossorigin="anonymous"
   integrity="{{ $scripts.Data.Integrity }}"
   src="{{ $scripts.RelPermalink }}"></script>
 
+<<<<<<< HEAD
+=======
+{{/* scripts lazy */}}
+<script
+  defer
+  async
+  crossorigin="anonymous"
+  integrity="{{ $scriptsLazy.Data.Integrity }}"
+  src="{{ $scriptsLazy.RelPermalink }}"></script>
+
+>>>>>>> upstream/main
 <!-- progressive web app -->
 {{ partialCached "pwa.html" . }}
 
@@ -35,3 +70,10 @@
 
 <!-- google adsense -->
 {{ partialCached "adsense-script.html" . }}
+<<<<<<< HEAD
+=======
+
+
+<!-- cookie consent -->
+{{ partialCached "announcement-script.html" . }}
+>>>>>>> upstream/main

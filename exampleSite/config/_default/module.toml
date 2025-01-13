@@ -1,6 +1,10 @@
 [hugoVersion]
 extended = true
+<<<<<<< HEAD
 min = "0.115.2"
+=======
+min = "0.139.2"
+>>>>>>> upstream/main
 
 [[imports]]
 path = "github.com/zeon-studio/hugoplate"
@@ -54,6 +58,12 @@ path = "github.com/gethugothemes/hugo-modules/components/social-share"
 path = "github.com/gethugothemes/hugo-modules/components/cookie-consent"
 
 [[imports]]
+<<<<<<< HEAD
+=======
+path = "github.com/gethugothemes/hugo-modules/components/announcement"
+
+[[imports]]
+>>>>>>> upstream/main
 path = "github.com/gethugothemes/hugo-modules/components/custom-script"
 
 [[imports]]
@@ -91,3 +101,9 @@ path = "github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager"
 
 # [[imports]]
 # path = "github.com/gethugothemes/hugo-modules/seo-tools/counter-analytics"
+<<<<<<< HEAD
+=======
+
+[[imports]]
+path = "github.com/hugomods/mermaid"
+>>>>>>> upstream/main
